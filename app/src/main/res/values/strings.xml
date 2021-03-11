@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Halloween party</string>
+    <string name="play">Играть</string>
+    <string name="exit">Выход</string>
+    <string name="puzzle">пазл</string>
+    <string name="to_puzzle">К выбору пазла</string>
+    <string name="to_menu">В меню</string>
+</resources>

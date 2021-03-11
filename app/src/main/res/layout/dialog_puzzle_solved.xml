@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@drawable/end_dialog_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/to_puzzles_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/first_btn_template"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:stateListAnimator="@animator/tap_behaviour"
+            android:text="@string/to_puzzle"
+            android:textColor="@color/yellow_300"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+
+        <Button
+            android:background="@drawable/second_btn_template"
+            android:stateListAnimator="@animator/tap_behaviour"
+            android:textColor="@color/yellow_300"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            android:id="@+id/to_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/to_menu" />
+
+    </LinearLayout>
+
+</layout>

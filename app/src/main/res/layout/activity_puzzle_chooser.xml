@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.activity.PuzzleChooserActivity">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.hwpty.halloweenparty.presentation.viewmodel.PuzzleChooserViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:columnCount="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onFirstImageClicked"
+                        android:src="@drawable/first_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:alpha="@{viewmodel.secondImageAlphaState}"
+                        android:clickable="@{viewmodel.secImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onSecondImageClicked"
+                        android:src="@drawable/second_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:alpha="@{viewmodel.thirdImageAlphaState}"
+                        android:clickable="@{viewmodel.thirdImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onThirdImageClicked"
+                        android:src="@drawable/third_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="8dp"
+                        android:alpha="@{viewmodel.fourthImageAlphaState}"
+                        android:clickable="@{viewmodel.fourthImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onFourthImageClicked"
+                        android:src="@drawable/fourth_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:alpha="@{viewmodel.fifthImageAlphaState}"
+                        android:clickable="@{viewmodel.fifthImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onFifthImageClicked"
+                        android:src="@drawable/fifth_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="8dp"
+                        android:alpha="@{viewmodel.sixthImageAlphaState}"
+                        android:clickable="@{viewmodel.sixthImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onSixthImageClicked"
+                        android:src="@drawable/six_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="8dp"
+                        android:alpha="@{viewmodel.seventhImageAlphaState}"
+                        android:clickable="@{viewmodel.seventhImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onSeventhImageClicked"
+                        android:src="@drawable/seventh_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:alpha="@{viewmodel.eightsImageAlphaState}"
+                        android:clickable="@{viewmodel.eightsImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onEightsImageClicked"
+                        android:src="@drawable/eight_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="8dp"
+                        android:alpha="@{viewmodel.ninesImageAlphaState}"
+                        android:clickable="@{viewmodel.ninethImageClickState}"
+                        android:contentDescription="@string/puzzle"
+                        android:onClick="onNinesImageClicked"
+                        android:src="@drawable/nine_puzzle"
+                        android:stateListAnimator="@animator/tap_behaviour" />
+
+                </GridLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/puzzle_chooser_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
